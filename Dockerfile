@@ -13,6 +13,7 @@ RUN apt-get -y update && \
     apt-get -y install \
 	subversion \ 
     openssh-server \
+    mariadb-client-core-10.0 \
 	supervisor \
     vim \
     nano
@@ -49,6 +50,7 @@ RUN apt-get install -y \
 	php7.0-tidy \
 	php7.0-xmlrpc \
 	php7.0-xsl \
+	php-mysql \
 	command-not-found
 
 RUN apt-get install apache2 libapache2-mod-php7.0 -y
