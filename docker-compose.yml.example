@@ -1,0 +1,12 @@
+version: '2'
+services:
+    web:
+        image: patriceckhart/docker-ubuntu-apache-php7-ssh
+        volumes:
+          - /app
+          - /var/log
+        ports:
+          - "80:80"
+          - "2022:22"
+        container_name: "docker-ssh-lamp"
+        entrypoint: /app/docker_start.sh
